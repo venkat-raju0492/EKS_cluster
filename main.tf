@@ -33,7 +33,7 @@ module "EKS" {
   source = "./modules/eks"
   region = "${var.region}"
   cluster_name = "${local.cluster_name}"
-  cluster_subnet_ids = "${var.public_subnet_ids}"
+  public_subnet_ids = "${var.public_subnet_ids}"
   eks_cluster_sg_id = "${module.Security.eks_cluster_sg_id}"
   eks_cluster_role_arn = "${module.Security.eks_cluster_role_arn}"
   eks_cluster_nodes_role_arn = "${module.Security.eks_cluster_nodes_role_arn}"

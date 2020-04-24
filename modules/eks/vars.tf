@@ -45,6 +45,10 @@ variable "cluster_nodes_subnet_ids" {
   description = "Subnet Ids to use for EKS cluster nodes"
 }
 
+variable "public_subnet_ids" {
+  type = "list"
+  description = "public subnet ids for tagging"
+}
 
 variable "nodes_desired_count" {
   description = "Autoscaling Group desired count"
@@ -90,8 +94,3 @@ variable "endpoint_public_access" {
   description = "Indicates whether or not the Amazon EKS public API server endpoint is enabled"
   default = true
 }
-
-
-
-
-
